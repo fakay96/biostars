@@ -17,13 +17,13 @@
 
     </div>
 
-    <div class="cold-sm-12 col-md-6 text-center ">
+    <div class="cold-sm-12 col-md-6 text-center custom-pag">
 
         <span class="step-links">
         {% if page_obj.has_previous %}
             <a href="?page={{ page_obj.previous_page_number }}&sort={{ sort }}&limit={{ limit }}&q={{ q }}">&lt;prev</a>
         {% else %}
-            &lt;prev
+            <a>&lt;prev</a>
         {% endif %}
 
             <span class="current">
@@ -34,7 +34,7 @@
             {% if page_obj.has_next %}
                 <a href="?page={{ page_obj.next_page_number }}&sort={{ sort }}&limit={{ limit }}&q={{ q }}">next &gt;</a>
             {% else %}
-                next &gt;
+                <a>next &gt;</a>
             {% endif %}
         </span>
     </div>

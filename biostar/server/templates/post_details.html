@@ -27,7 +27,7 @@
 
     {#  {% search_bar %} #}
 
-    <div class="row" itemscope itemtype="http://schema.org/QAPage">
+    <div class="row" style="margin-top: 24px" itemscope itemtype="http://schema.org/QAPage">
 
         <div class="col-xs-12 col-md-9">
 
@@ -99,7 +99,7 @@
         </div>
         <div class="col-xs-12 col-md-3 sidebar">
             {% cache 600 "similar" post.id %}
-                <h4>Similar posts &bull; <a href="{% url 'search-page' %}">Search &raquo;</a></h4>
+                <h4 class="head">Similar posts &bull; <a href="{% url 'search-page' %}">Search &raquo;</a></h4>
 
                 {% more_like_this post as related limit 25 %}
 

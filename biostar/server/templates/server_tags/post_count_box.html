@@ -52,19 +52,19 @@
 
         <div class="clearfix">
 
-            <span class="tags tag-pad visible-lg visible-md">
+            <div class="tags visible-lg visible-md">
             {% for tag in post.tag_set.all %}
                 <a class="tag" href="/t/{{ tag.name }}/">{{ tag.name }}</a>
             {% endfor %}
-            </span>
-            <span class="userlink text-right muted">
+            </div>
+            <div class="userlink muted">
             written {{ post.creation_date|time_ago }} by {% userlink post.author %}
                 {% if post.author != post.lastedit_user %}
                     &bull; updated
                     <span class="ago2">{{ post.lastedit_date|time_ago }}</span> by
                     {% userlink post.lastedit_user %}
                 {% endif %}
-            </span>
+            </div>
 
         </div>
 

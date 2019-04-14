@@ -172,12 +172,10 @@
             </div>
 
         {% else %}
-
-            <div class="col-md-9 top text-center">
-                {%  include "site_description.html" %}
-                <span class="pull-right">
-                    <a href="{% url 'flatpage' 'about' %}">about</a> &bull; <a href="{% url 'flatpage' 'faq' %}">faq</a>
-                    &bull; <a href="{% url 'rss' %}">rss <i class="fa fa-rss"></i></a>
+            <div class="col-md-9 top">
+                <span class="">
+                    <a href="{% url 'flatpage' 'about' %}">about</a> <a href="{% url 'flatpage' 'faq' %}">faqs</a>
+                    <a href="{% url 'rss' %}">rss <i class="fa fa-rss"></i></a>
                 </span>
             </div>
 
